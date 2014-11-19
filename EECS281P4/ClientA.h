@@ -8,7 +8,9 @@
 
 #ifndef EECS281P4_ClientA_h
 #define EECS281P4_ClientA_h
+#include <queue>
 #include "SparseGraph.h"
+using namespace std;
 
 // deliver as fast as possible
 // drone type I
@@ -23,7 +25,17 @@
 //kruskal
 
 class ClientA : public Client {
+
+public:
     SparseGraph map;
+    
+    void setMap() {
+        map.getInput();
+    }
+    
+    void findPath() {
+    }
+
 };
 
 #endif
