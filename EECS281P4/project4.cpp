@@ -14,6 +14,8 @@ int main(int argc, char * argv[]) {
     cout << fixed;
 }
 
+// testing github
+
 void getOpts(int argc, char * argv[]) {
     struct option longOpts[] = {
         {"clientType", required_argument, 0, 'c'},
