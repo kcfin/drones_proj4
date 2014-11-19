@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
+		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8ACA8C1B1A1CEE110017FFE1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
 			files = (
+				BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -30,6 +32,7 @@
 		8ACA8C2D1A1CEF270017FFE1 /* DenseGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenseGraph.h; sourceTree = "<group>"; };
 		8ACA8C2E1A1CF0610017FFE1 /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientA.h; sourceTree = "<group>"; };
+		BF610CF01A1D1C2200436368 /* test-1-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-1-A.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +71,17 @@
 				8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */,
 				8ACA8C2C1A1CEF0B0017FFE1 /* SparseGraph.h */,
 				8ACA8C2D1A1CEF270017FFE1 /* DenseGraph.h */,
+				BF610CF11A1D1C2D00436368 /* Tests */,
 			);
 			path = EECS281P4;
+			sourceTree = "<group>";
+		};
+		BF610CF11A1D1C2D00436368 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF610CF01A1D1C2200436368 /* test-1-A.txt */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +245,7 @@
 				8ACA8C281A1CEE120017FFE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

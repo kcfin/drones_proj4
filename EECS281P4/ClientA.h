@@ -27,13 +27,14 @@ using namespace std;
 class ClientA : public Client {
 
 public:
-    SparseGraph map;
     
-    void setMap() {
-        map.getInput();
+    virtual void getInput() {
+        sg.getInput();
+        sg.testPrint();
     }
     
-    void findPath() {
+    virtual void findPath() {
+        sg.findPath();
     }
 
 };

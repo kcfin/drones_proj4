@@ -147,6 +147,13 @@ public:
             printPaths.pop();
         }
     }
+    
+    void testPrint() {
+        for(int i = 0; i < facilities.size(); ++i) {
+            Facility *f = &facilities[i];
+            cout << "Facility " << f->facNum << ": " << f->x << " " << f->y << endl;
+        }
+    }
 };
 
 #endif

@@ -9,6 +9,8 @@
 #ifndef EECS281P4_DenseGraph_h
 #define EECS281P4_DenseGraph_h
 
-
+class DenseGraph {
+    
+};
 
 #endif
