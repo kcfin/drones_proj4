@@ -7,3 +7,43 @@
 //
 
 #include "project4.h"
+
+int main(int argc, char * argv[]) {
+    ios_base::sync_with_stdio(false);
+}
+
+void getOpts(int argc, char * argv[]) {
+    struct option longOpts[] = {
+        {"clientType", required_argument, 0, 'c'},
+        {"help", no_argument, 0, 'h'}
+    };
+    
+    char opt = 0;
+    int index = 0;
+    char type;
+    
+    while ((opt = getopt_long(argc, argv, "c:h", longOpts, &index)) != -1) {
+        switch(opt) {
+            case 'c':
+                type = *optarg;
+                if(type == 'A') {
+                    client = &ca;
+                } else if (type == 'B') {
+                    //set client B
+                } else if (type == 'C') {
+                    //set client C
+                } else {
+                    cerr << "Not a valid client type!" << endl;
+                    exit(1);
+                }
+                break;
+            case 'h':
+                //print help message
+                cout << "help me\n";
+                exit(0);
+            default:
+                cout << "Flag not recognized!\n";
+                exit(1);
+        }
+    }
+}
