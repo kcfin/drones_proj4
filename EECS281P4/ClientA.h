@@ -30,7 +30,6 @@ public:
     
     virtual void getInput() {
         sg.getInput();
-        sg.testPrint();
     }
     
     virtual void findPath() {

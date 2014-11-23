@@ -13,6 +13,7 @@
 #include <vector>
 #include <queue>
 #include <math.h>
+#include <fstream>
 using namespace std;
 
 class SparseGraph {
@@ -21,11 +22,12 @@ public:
         int facNum = 0;
         int x = 0;
         int y = 0;
+        // how to fix this?
         Facility *rep = this;
         
         Facility() {}
         
-        Facility(int fac) : facNum(fac) {}
+        Facility(int fac, int xc, int yc) : facNum(fac), x(xc), y(yc) {}
     };
     
     struct Path {
@@ -60,14 +62,14 @@ public:
     double totalDistance = 0;
     
     void getInput() {
-        int flush;
+        string flush;
         int facNum;
         cin >> flush >> facNum;
         
         for(int i = 0; i < facNum; ++i) {
-            Facility fac(i);
-            cin >> fac.x >> fac.y;
-            facilities.push_back(fac);
+            int x, y;
+            cin >> x >> y;
+            facilities.push_back(Facility(i, x, y));
         }
         
         int pathNum;
@@ -152,6 +154,11 @@ public:
         for(int i = 0; i < facilities.size(); ++i) {
             Facility *f = &facilities[i];
             cout << "Facility " << f->facNum << ": " << f->x << " " << f->y << endl;
+        }
+        
+        for(int i = 0; i < paths.size(); ++i) {
+            Path *p = &edges[i];
+            cout << "Path: " << p->fac1->facNum << " " << p->fac2->facNum << " " << p->distance << endl;
         }
     }
 };

@@ -15,11 +15,11 @@ int main(int argc, char * argv[]) {
     
     ifstream in("test-1-A.txt");
     cin.rdbuf(in.rdbuf());
-    
+        
     getOpts(argc, argv);
     client->getInput();
-//    cient.findPath();
-//    client.printOutput();
+    client->findPath();
+    client->printOutput();
 }
 
 void getOpts(int argc, char * argv[]) {
