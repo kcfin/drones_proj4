@@ -22,6 +22,8 @@ int main(int argc, char * argv[]) {
     client->printOutput();
 }
 
+//testing again
+
 void getOpts(int argc, char * argv[]) {
     struct option longOpts[] = {
         {"clientType", required_argument, 0, 'c'},
