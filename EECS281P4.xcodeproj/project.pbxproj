@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
 		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
+		BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFD2E8171A23B378003F19BD /* sample-1-A.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,6 +19,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */,
 				BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +35,8 @@
 		8ACA8C2E1A1CF0610017FFE1 /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientA.h; sourceTree = "<group>"; };
 		BF610CF01A1D1C2200436368 /* test-1-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-1-A.txt"; sourceTree = "<group>"; };
+		BFD2E8161A23B378003F19BD /* sample-1-A-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-1-A-out.txt"; sourceTree = "<group>"; };
+		BFD2E8171A23B378003F19BD /* sample-1-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-1-A.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				BF610CF01A1D1C2200436368 /* test-1-A.txt */,
+				BFD2E8171A23B378003F19BD /* sample-1-A.txt */,
+				BFD2E8161A23B378003F19BD /* sample-1-A-out.txt */,
 			);
 			name = Tests;
 			sourceTree = "<group>";

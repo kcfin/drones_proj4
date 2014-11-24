@@ -24,8 +24,6 @@ public:
         int x;
         int y;
         int rep;
-        // how to fix this?
-//        Facility *rep;
         
         Facility() : facNum(0), x(0), y(0), rep(0) {}
         
@@ -51,7 +49,7 @@ public:
         }
         
         ~Path() {
-            cout << "object is being deleted" << endl;
+//            cout << "object is being deleted" << endl;
         }
         
     };
@@ -142,15 +140,15 @@ public:
         if(rep1 < rep2) {
             parent = path->fac2;
             while(parent->rep != rep1) {
-                temp = path->fac2->rep;
-                path->fac2->rep = rep1;
+                temp = parent->rep;
+                parent->rep = rep1;
                 parent = &facilities[temp];
             }
         } else {
             parent = path->fac1;
             while(parent->rep != rep2) {
-                temp = path->fac1->rep;
-                path->fac1->rep = rep2;
+                temp = parent->rep;
+                parent->rep = rep2;
                 parent = &facilities[temp];
             }
         }
@@ -164,6 +162,8 @@ public:
             if(canTravel(path)) {
                 totalDistance += path->distance;
                 printPaths.push(path);
+            } else {
+                delete path;
             }
             
             paths.pop();
@@ -172,13 +172,13 @@ public:
     
     void printPath() {
         
-        
         ostringstream os;
         os << totalDistance << '\n';
         
         while(!printPaths.empty()) {
             Path *path = printPaths.front();
             os << path->fac1->facNum << " " << path->fac2->facNum << '\n';
+            delete path;
             printPaths.pop();
         }
         
