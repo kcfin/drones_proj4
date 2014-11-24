@@ -181,6 +181,8 @@ public:
             os << path->fac1->facNum << " " << path->fac2->facNum << '\n';
             printPaths.pop();
         }
+        
+        cout << os.str();
     }
     
     void testPrint() {
