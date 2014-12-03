@@ -12,17 +12,6 @@
 #include "SparseGraph.h"
 using namespace std;
 
-// deliver as fast as possible
-// drone type I
-// cost efficient installation of beacons for drones to reach any facility
-// from any other facility
-// mst in the form of beacon installation costs
-// facility can be unreachable
-
-//sparse graph
-//E much smaller than V2
-//adj list
-//kruskal
 
 class ClientA : public Client {
 

@@ -13,6 +13,7 @@
 #include "DenseGraph.h"
 
 class Client {
+    
 public:
     
     SparseGraph sg;
