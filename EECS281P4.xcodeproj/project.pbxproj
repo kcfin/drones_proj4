@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A32BF7E1A2F4B5A00C51115 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8A32BF701A2F4B5A00C51115 /* Makefile */; };
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
 		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
 		BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFD2E8171A23B378003F19BD /* sample-1-A.txt */; };
@@ -27,11 +28,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A32BF6F1A2F4B5A00C51115 /* 1-A.out */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-A.out"; sourceTree = "<group>"; };
+		8A32BF701A2F4B5A00C51115 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8A32BF711A2F4B5A00C51115 /* s-1-A.out */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s-1-A.out"; sourceTree = "<group>"; };
+		8A32BF721A2F4B5A00C51115 /* sample-1-BC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-1-BC.txt"; sourceTree = "<group>"; };
+		8A32BF731A2F4B5A00C51115 /* sample-1-C-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-1-C-out.txt"; sourceTree = "<group>"; };
+		8A32BF741A2F4B5A00C51115 /* sample-2-B-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-2-B-out.txt"; sourceTree = "<group>"; };
+		8A32BF751A2F4B5A00C51115 /* sample-2-BC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-2-BC.txt"; sourceTree = "<group>"; };
+		8A32BF761A2F4B5A00C51115 /* sample-2-C-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-2-C-out.txt"; sourceTree = "<group>"; };
+		8A32BF771A2F4B5A00C51115 /* sample-3-B-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-3-B-out.txt"; sourceTree = "<group>"; };
+		8A32BF781A2F4B5A00C51115 /* sample-4-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-4-A.txt"; sourceTree = "<group>"; };
+		8A32BF791A2F4B5A00C51115 /* sample-4-BC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-4-BC.txt"; sourceTree = "<group>"; };
+		8A32BF7A1A2F4B5A00C51115 /* sample-4-C-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-4-C-out.txt"; sourceTree = "<group>"; };
+		8A32BF7B1A2F4B5A00C51115 /* sample-5-A-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-5-A-out.txt"; sourceTree = "<group>"; };
+		8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-5-A.txt"; sourceTree = "<group>"; };
+		8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-5-B.txt"; sourceTree = "<group>"; };
+		8A32BF7F1A2F509200C51115 /* ClientB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientB.h; sourceTree = "<group>"; };
 		8ACA8C1D1A1CEE110017FFE1 /* EECS281P4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EECS281P4; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACA8C291A1CEEF40017FFE1 /* project4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = project4.cpp; sourceTree = "<group>"; };
 		8ACA8C2A1A1CEEF40017FFE1 /* project4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = project4.h; sourceTree = "<group>"; };
-		8ACA8C2C1A1CEF0B0017FFE1 /* SparseGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparseGraph.h; sourceTree = "<group>"; };
-		8ACA8C2D1A1CEF270017FFE1 /* DenseGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DenseGraph.h; sourceTree = "<group>"; };
 		8ACA8C2E1A1CF0610017FFE1 /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientA.h; sourceTree = "<group>"; };
 		BF610CF01A1D1C2200436368 /* test-1-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-1-A.txt"; sourceTree = "<group>"; };
@@ -73,8 +88,7 @@
 				8ACA8C2A1A1CEEF40017FFE1 /* project4.h */,
 				8ACA8C2E1A1CF0610017FFE1 /* Client.h */,
 				8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */,
-				8ACA8C2C1A1CEF0B0017FFE1 /* SparseGraph.h */,
-				8ACA8C2D1A1CEF270017FFE1 /* DenseGraph.h */,
+				8A32BF7F1A2F509200C51115 /* ClientB.h */,
 				BF610CF11A1D1C2D00436368 /* Tests */,
 			);
 			path = EECS281P4;
@@ -83,6 +97,21 @@
 		BF610CF11A1D1C2D00436368 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8A32BF6F1A2F4B5A00C51115 /* 1-A.out */,
+				8A32BF701A2F4B5A00C51115 /* Makefile */,
+				8A32BF711A2F4B5A00C51115 /* s-1-A.out */,
+				8A32BF721A2F4B5A00C51115 /* sample-1-BC.txt */,
+				8A32BF731A2F4B5A00C51115 /* sample-1-C-out.txt */,
+				8A32BF741A2F4B5A00C51115 /* sample-2-B-out.txt */,
+				8A32BF751A2F4B5A00C51115 /* sample-2-BC.txt */,
+				8A32BF761A2F4B5A00C51115 /* sample-2-C-out.txt */,
+				8A32BF771A2F4B5A00C51115 /* sample-3-B-out.txt */,
+				8A32BF781A2F4B5A00C51115 /* sample-4-A.txt */,
+				8A32BF791A2F4B5A00C51115 /* sample-4-BC.txt */,
+				8A32BF7A1A2F4B5A00C51115 /* sample-4-C-out.txt */,
+				8A32BF7B1A2F4B5A00C51115 /* sample-5-A-out.txt */,
+				8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */,
+				8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */,
 				BF610CF01A1D1C2200436368 /* test-1-A.txt */,
 				BFD2E8171A23B378003F19BD /* sample-1-A.txt */,
 				BFD2E8161A23B378003F19BD /* sample-1-A-out.txt */,
@@ -141,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A32BF7E1A2F4B5A00C51115 /* Makefile in Sources */,
 				8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
