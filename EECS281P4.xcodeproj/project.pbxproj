@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0143EE1A3389D3000A3B19 /* project4.h in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C2A1A1CEEF40017FFE1 /* project4.h */; };
+		8A0143EF1A3389D3000A3B19 /* Client.h in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C2E1A1CF0610017FFE1 /* Client.h */; };
+		8A0143F01A3389D3000A3B19 /* ClientA.h in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */; };
+		8A0143F11A3389D3000A3B19 /* ClientB.h in Sources */ = {isa = PBXBuildFile; fileRef = 8A32BF7F1A2F509200C51115 /* ClientB.h */; };
+		8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF721A2F4B5A00C51115 /* sample-1-BC.txt */; };
+		8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF751A2F4B5A00C51115 /* sample-2-BC.txt */; };
+		8A0143F81A33A547000A3B19 /* ClientC.h in Sources */ = {isa = PBXBuildFile; fileRef = 8A0143F71A33A511000A3B19 /* ClientC.h */; };
 		8A32BF7E1A2F4B5A00C51115 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8A32BF701A2F4B5A00C51115 /* Makefile */; };
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
 		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
@@ -20,6 +27,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */,
+				8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */,
 				BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */,
 				BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */,
 			);
@@ -28,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A0143F71A33A511000A3B19 /* ClientC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientC.h; sourceTree = "<group>"; };
 		8A32BF6F1A2F4B5A00C51115 /* 1-A.out */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-A.out"; sourceTree = "<group>"; };
 		8A32BF701A2F4B5A00C51115 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		8A32BF711A2F4B5A00C51115 /* s-1-A.out */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s-1-A.out"; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 				8ACA8C2E1A1CF0610017FFE1 /* Client.h */,
 				8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */,
 				8A32BF7F1A2F509200C51115 /* ClientB.h */,
+				8A0143F71A33A511000A3B19 /* ClientC.h */,
 				BF610CF11A1D1C2D00436368 /* Tests */,
 			);
 			path = EECS281P4;
@@ -170,6 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0143F81A33A547000A3B19 /* ClientC.h in Sources */,
+				8A0143EE1A3389D3000A3B19 /* project4.h in Sources */,
+				8A0143EF1A3389D3000A3B19 /* Client.h in Sources */,
+				8A0143F01A3389D3000A3B19 /* ClientA.h in Sources */,
+				8A0143F11A3389D3000A3B19 /* ClientB.h in Sources */,
 				8A32BF7E1A2F4B5A00C51115 /* Makefile in Sources */,
 				8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */,
 			);

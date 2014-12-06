@@ -17,10 +17,14 @@
 #include <sstream>
 #include "Client.h"
 #include "ClientA.h"
+#include "ClientB.h"
+#include "ClientC.h"
 using namespace std;
 
 Client * client;
 ClientA ca;
+ClientB cb;
+ClientC cc;
 
 void getOpts(int argc, char * argv[]);
 

@@ -13,8 +13,8 @@ int main(int argc, char * argv[]) {
     cout << setprecision(2);
     cout << fixed;
     
-//    ifstream in("sample-1-A.txt");
-//    cin.rdbuf(in.rdbuf());
+    ifstream in("sample-2-BC.txt");
+    cin.rdbuf(in.rdbuf());
     
     getOpts(argc, argv);
     client->getInput();
@@ -41,7 +41,7 @@ void getOpts(int argc, char * argv[]) {
                 if(type == 'A') {
                     client = &ca;
                 } else if (type == 'B') {
-                    //set client B
+                    client = &cb;
                 } else if (type == 'C') {
                     //set client C
                 } else {

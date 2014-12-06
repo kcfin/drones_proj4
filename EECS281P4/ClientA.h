@@ -23,10 +23,6 @@ public:
         Facility() : facNum(0), x(0), y(0), rep(0) {}
         
         Facility(int fac, int xc, int yc) : facNum(fac), x(xc), y(yc), rep(fac) {}
-        
-        ~Facility() {
-            //            cout << "object is being deleted" << endl;
-        }
     };
     
     class Path {
@@ -42,19 +38,15 @@ public:
         }
         
         void setDistance() {
-            double x = pow((fac1->x - fac2->x), 2);
-            double y = pow((fac1->y - fac2->y), 2);
-            distance = sqrt(x+y);
+            distance = sqrt(pow((fac1->x - fac2->x), 2) + pow((fac1->y - fac2->y), 2));
         }
         
-        ~Path() {
-            //            cout << "object is being deleted" << endl;
-        }
+        ~Path() { }
         
     };
     
     queue<Path*> printPaths;
-    vector<Facility*> facilities;
+    vector<Facility> facilities;
     double totalDistance = 0;
     
     struct leastDistance {
@@ -73,7 +65,7 @@ public:
         for(int i = 0; i < facNum; ++i) {
             int x, y;
             cin >> x >> y;
-            facilities.push_back(new Facility(i, x, y));
+            facilities.push_back(Facility(i, x, y));
         }
         
         int pathNum;
@@ -83,7 +75,7 @@ public:
             
             int idx1, idx2;
             cin >> idx1 >> idx2;
-            paths.push(new Path(facilities[idx1], facilities[idx2]));
+            paths.push(new Path(&facilities[idx1], &facilities[idx2]));
         }
     }
     
@@ -92,11 +84,11 @@ public:
         Facility *f2 = path->fac2;
         
         while(f1->facNum != f1->rep) {
-            f1 = facilities[f1->rep];
+            f1 = &facilities[f1->rep];
         }
         
         while(f2->facNum != f2->rep) {
-            f2 = facilities[f2->rep];
+            f2 = &facilities[f2->rep];
         }
         
         if(f1->facNum != f2->facNum) {
@@ -116,14 +108,14 @@ public:
             while(parent->rep != rep1) {
                 temp = parent->rep;
                 parent->rep = rep1;
-                parent = facilities[temp];
+                parent = &facilities[temp];
             }
         } else {
             parent = path->fac1;
             while(parent->rep != rep2) {
                 temp = parent->rep;
                 parent->rep = rep2;
-                parent = facilities[temp];
+                parent = &facilities[temp];
             }
         }
     }
@@ -155,14 +147,6 @@ public:
             printPaths.pop();
         }
         
-        deleteFacilities();
-    }
-    
-    void deleteFacilities() {
-        while(!facilities.empty()) {
-            delete facilities.back();
-            facilities.pop_back();
-        }
     }
 
 };
