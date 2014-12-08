@@ -14,84 +14,87 @@ public:
     
     struct Facility {
         int facNum;
-        double x;
-        double y;
-        bool visited;
+        int x;
+        int y;
         double minDist;
         Facility *parent;
         
-        Facility() : facNum(0), x(0), y(0), visited(false), minDist(DBL_MAX), parent(nullptr) {}
+        Facility() : facNum(0), x(0), y(0), minDist(DBL_MAX), parent(nullptr) {}
         
-        Facility(int fac, double xc, double yc) : facNum(fac), x(xc), y(yc), visited(false), minDist(DBL_MAX), parent(nullptr) {}
+        Facility(int fac, double xc, double yc) : facNum(fac), x(xc), y(yc), minDist(DBL_MAX), parent(nullptr) {}
         
     };
     
-    struct leastDistance {
-        bool operator() (const Facility *f1, const Facility *f2) const {
-            if(f1->minDist == f2->minDist) {
-                return f1->facNum > f2->facNum;
-            }else {
-                return f1->minDist > f2->minDist;
-            }
-        }
-    };
-    
+    vector<Facility*> unvisited;
     vector<Facility> facilities;
-    priority_queue<Facility*, vector<Facility*>, leastDistance> paths;
     double totalDistance = 0;
     int facs = 0;
     
     virtual void getInput() {
         string flush;
         cin >> flush >> facs;
+        unvisited.reserve(facs);
+        facilities.reserve(facs);
         
         for(int i = 0; i < facs; ++i) {
             double x, y;
             cin >> x >> y;
             facilities.push_back(Facility(i, x, y));
+            unvisited.push_back(&facilities[i]);
         }
     }
     
     double findDistance(Facility *fac1, Facility *fac2) {
         return sqrt(pow((fac1->x-fac2->x), 2) + pow((fac1->y-fac2->y), 2));
     }
-
+    
     
     virtual void findPath() {
-        Facility *curFac = &facilities[0];
-        curFac->minDist = 0;
-        paths.push(curFac);
-        int count = 0;
-        
-        while(count != facs) {
+        int facsVisited = 0;
+        int tempIdx = 0;
+        int nextIdx = 0;
+        facilities[0].minDist = 0;
+
+        while(facsVisited < facs) {
             
-            curFac = paths.top();
-            curFac->visited = true;
-            totalDistance += curFac->minDist;
-            count++;
-            paths.pop();
-            updateDistances(curFac);
-        }
-    }
-    
-    void updateDistances(Facility *curFac) {
-        for(int i = 0; i < facs; i++) {
-            Facility *update = &facilities[i];
-            if(i != curFac->facNum && update->visited == false) {
-                double dist = findDistance(curFac, update);
-                if(dist < update->minDist) {
-                    update->minDist = dist;
-                    update->parent = curFac;
-                    paths.push(update);
+//            uint nextIdx = 0;
+//            
+//            for(uint i = 0; i < unvisited.size(); ++i) {
+//                if(unvisited[i]->minDist < unvisited[nextIdx]->minDist) {
+//                    nextIdx = i;
+//                }
+//            }
+            tempIdx = 0;
+            for(uint i = 0; i < unvisited.size(); i++) {
+                if(i != nextIdx) {
+                    double dist = findDistance(unvisited[nextIdx], unvisited[i]);
+                    if(dist < unvisited[i]->minDist) {
+                        unvisited[i]->minDist = dist;
+                        unvisited[i]->parent = unvisited[nextIdx];
+                    }
+                }
+                
+                if(unvisited[i]->minDist < unvisited[tempIdx]->minDist) {
+                    tempIdx = i;
                 }
             }
+            
+            totalDistance += unvisited[nextIdx]->minDist;
+            unvisited.erase(unvisited.begin() + nextIdx);
+            facsVisited++;
+            
+            if(nextIdx <= tempIdx) {
+                tempIdx -= 1;
+            }
+            
+            nextIdx = tempIdx;
         }
     }
     
     virtual void printPath() {
         cout << totalDistance << '\n';
-        
-        for(int i = 0; i < facs; ++i) {
+
+        for(uint i = 0; i < facilities.size(); ++i) {
             Facility *f = &facilities[i];
             if(f->parent != nullptr) {
                 if(f->facNum < f->parent->facNum) {

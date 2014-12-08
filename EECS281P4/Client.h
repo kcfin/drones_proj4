@@ -23,18 +23,7 @@ public:
     virtual void findPath() { }
     
     virtual void printPath() { }
-    
-    //    void testPrint() {
-    //        for(unsigned int i = 0; i < facilities.size(); ++i) {
-    //            Facility *f = &facilities[i];
-    //            cout << "Facility " << f->facNum << ": " << f->x << " " << f->y << endl;
-    //        }
-    //
-    //        for(unsigned int i = 0; i < paths.size(); ++i) {
-    //            Path *p = &edges[i];
-    //            cout << "Path: " << p->fac1->facNum << " " << p->fac2->facNum << " " << p->distance << endl;
-    //        }
-    //    }
+
 };
 
 

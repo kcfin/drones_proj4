@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A0143EE1A3389D3000A3B19 /* project4.h in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C2A1A1CEEF40017FFE1 /* project4.h */; };
-		8A0143EF1A3389D3000A3B19 /* Client.h in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C2E1A1CF0610017FFE1 /* Client.h */; };
-		8A0143F01A3389D3000A3B19 /* ClientA.h in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */; };
-		8A0143F11A3389D3000A3B19 /* ClientB.h in Sources */ = {isa = PBXBuildFile; fileRef = 8A32BF7F1A2F509200C51115 /* ClientB.h */; };
 		8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF721A2F4B5A00C51115 /* sample-1-BC.txt */; };
 		8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF751A2F4B5A00C51115 /* sample-2-BC.txt */; };
-		8A0143F81A33A547000A3B19 /* ClientC.h in Sources */ = {isa = PBXBuildFile; fileRef = 8A0143F71A33A511000A3B19 /* ClientC.h */; };
-		8A32BF7E1A2F4B5A00C51115 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 8A32BF701A2F4B5A00C51115 /* Makefile */; };
+		8A8F10401A35FF0D00C91E78 /* sample-4-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF781A2F4B5A00C51115 /* sample-4-A.txt */; };
+		8A8F10411A35FF0D00C91E78 /* sample-4-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF791A2F4B5A00C51115 /* sample-4-BC.txt */; };
+		8A8F10421A35FF0D00C91E78 /* sample-5-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */; };
+		8A8F10431A35FF0D00C91E78 /* sample-5-B.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */; };
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
 		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
+		BF6670451A33DCF900B0D54B /* project4.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACA8C2A1A1CEEF40017FFE1 /* project4.h */; };
+		BF6670461A33DCF900B0D54B /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACA8C2E1A1CF0610017FFE1 /* Client.h */; };
+		BF6670471A33DCF900B0D54B /* ClientA.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */; };
+		BF6670481A33DCF900B0D54B /* ClientB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A32BF7F1A2F509200C51115 /* ClientB.h */; };
+		BF6670491A33DCF900B0D54B /* ClientC.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0143F71A33A511000A3B19 /* ClientC.h */; };
 		BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFD2E8171A23B378003F19BD /* sample-1-A.txt */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				8A8F10401A35FF0D00C91E78 /* sample-4-A.txt in CopyFiles */,
+				8A8F10411A35FF0D00C91E78 /* sample-4-BC.txt in CopyFiles */,
+				8A8F10421A35FF0D00C91E78 /* sample-5-A.txt in CopyFiles */,
+				8A8F10431A35FF0D00C91E78 /* sample-5-B.txt in CopyFiles */,
 				8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */,
 				8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */,
 				BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */,
@@ -58,7 +65,7 @@
 		8ACA8C291A1CEEF40017FFE1 /* project4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = project4.cpp; sourceTree = "<group>"; };
 		8ACA8C2A1A1CEEF40017FFE1 /* project4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = project4.h; sourceTree = "<group>"; };
 		8ACA8C2E1A1CF0610017FFE1 /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
-		8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientA.h; sourceTree = "<group>"; };
+		8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ClientA.h; sourceTree = "<group>"; };
 		BF610CF01A1D1C2200436368 /* test-1-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-1-A.txt"; sourceTree = "<group>"; };
 		BFD2E8161A23B378003F19BD /* sample-1-A-out.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-1-A-out.txt"; sourceTree = "<group>"; };
 		BFD2E8171A23B378003F19BD /* sample-1-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-1-A.txt"; sourceTree = "<group>"; };
@@ -132,6 +139,21 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		BF6670441A33DCEF00B0D54B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF6670451A33DCF900B0D54B /* project4.h in Headers */,
+				BF6670461A33DCF900B0D54B /* Client.h in Headers */,
+				BF6670471A33DCF900B0D54B /* ClientA.h in Headers */,
+				BF6670481A33DCF900B0D54B /* ClientB.h in Headers */,
+				BF6670491A33DCF900B0D54B /* ClientC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		8ACA8C1C1A1CEE110017FFE1 /* EECS281P4 */ = {
 			isa = PBXNativeTarget;
@@ -140,6 +162,7 @@
 				8ACA8C191A1CEE110017FFE1 /* Sources */,
 				8ACA8C1A1A1CEE110017FFE1 /* Frameworks */,
 				8ACA8C1B1A1CEE110017FFE1 /* CopyFiles */,
+				BF6670441A33DCEF00B0D54B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -181,12 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0143F81A33A547000A3B19 /* ClientC.h in Sources */,
-				8A0143EE1A3389D3000A3B19 /* project4.h in Sources */,
-				8A0143EF1A3389D3000A3B19 /* Client.h in Sources */,
-				8A0143F01A3389D3000A3B19 /* ClientA.h in Sources */,
-				8A0143F11A3389D3000A3B19 /* ClientB.h in Sources */,
-				8A32BF7E1A2F4B5A00C51115 /* Makefile in Sources */,
 				8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

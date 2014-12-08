@@ -56,6 +56,14 @@ atests: debug
 	./$(EXECUTABLE) -c A < sample-5-A.txt > s-5-A.out
 	diff s-5-A.out sample-5-A-out.txt
 
+btests: debug
+	./$(EXECUTABLE) -c B < sample-2-BC.txt > s-2-B.out
+	diff s-2-B.out sample-2-B-out.txt
+
+ctests: debug
+	./$(EXECUTABLE) -c C < sample-2-BC.txt > s-2-C.out
+	diff s-2-C.out sample-2-C-out.txt
+
 
 # make submit.tar.gz - cleans, runs dos2unix, creates tarball
 MY_FILES=$(wildcard Makefile *.h *.cpp test*.txt)

@@ -13,7 +13,7 @@ int main(int argc, char * argv[]) {
     cout << setprecision(2);
     cout << fixed;
     
-    ifstream in("sample-2-BC.txt");
+    ifstream in("sample-1-BC.txt");
     cin.rdbuf(in.rdbuf());
     
     getOpts(argc, argv);
@@ -43,6 +43,7 @@ void getOpts(int argc, char * argv[]) {
                 } else if (type == 'B') {
                     client = &cb;
                 } else if (type == 'C') {
+                    client = &cc;
                     //set client C
                 } else {
                     cerr << "Not a valid client type!" << endl;
