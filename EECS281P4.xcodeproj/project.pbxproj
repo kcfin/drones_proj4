@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF721A2F4B5A00C51115 /* sample-1-BC.txt */; };
 		8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF751A2F4B5A00C51115 /* sample-2-BC.txt */; };
-		8A8F10401A35FF0D00C91E78 /* sample-4-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF781A2F4B5A00C51115 /* sample-4-A.txt */; };
-		8A8F10411A35FF0D00C91E78 /* sample-4-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF791A2F4B5A00C51115 /* sample-4-BC.txt */; };
-		8A8F10421A35FF0D00C91E78 /* sample-5-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */; };
-		8A8F10431A35FF0D00C91E78 /* sample-5-B.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */; };
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
 		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
 		BF6670451A33DCF900B0D54B /* project4.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACA8C2A1A1CEEF40017FFE1 /* project4.h */; };
@@ -20,6 +16,10 @@
 		BF6670471A33DCF900B0D54B /* ClientA.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACA8C2F1A1CF2930017FFE1 /* ClientA.h */; };
 		BF6670481A33DCF900B0D54B /* ClientB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A32BF7F1A2F509200C51115 /* ClientB.h */; };
 		BF6670491A33DCF900B0D54B /* ClientC.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0143F71A33A511000A3B19 /* ClientC.h */; };
+		BF6670551A36629B00B0D54B /* sample-4-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF781A2F4B5A00C51115 /* sample-4-A.txt */; };
+		BF6670561A36629B00B0D54B /* sample-4-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF791A2F4B5A00C51115 /* sample-4-BC.txt */; };
+		BF6670571A36629B00B0D54B /* sample-5-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */; };
+		BF6670581A36629B00B0D54B /* sample-5-B.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */; };
 		BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BFD2E8171A23B378003F19BD /* sample-1-A.txt */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +30,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				8A8F10401A35FF0D00C91E78 /* sample-4-A.txt in CopyFiles */,
-				8A8F10411A35FF0D00C91E78 /* sample-4-BC.txt in CopyFiles */,
-				8A8F10421A35FF0D00C91E78 /* sample-5-A.txt in CopyFiles */,
-				8A8F10431A35FF0D00C91E78 /* sample-5-B.txt in CopyFiles */,
+				BF6670551A36629B00B0D54B /* sample-4-A.txt in CopyFiles */,
+				BF6670561A36629B00B0D54B /* sample-4-BC.txt in CopyFiles */,
+				BF6670571A36629B00B0D54B /* sample-5-A.txt in CopyFiles */,
+				BF6670581A36629B00B0D54B /* sample-5-B.txt in CopyFiles */,
 				8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */,
 				8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */,
 				BFD2E8181A23B3EC003F19BD /* sample-1-A.txt in CopyFiles */,

@@ -45,26 +45,24 @@ public:
     }
     
     double findDistance(Facility *fac1, Facility *fac2) {
-        return sqrt(pow((fac1->x-fac2->x), 2) + pow((fac1->y-fac2->y), 2));
+        return pow((fac1->x-fac2->x), 2) + pow((fac1->y-fac2->y), 2);
     }
     
     
     virtual void findPath() {
         int facsVisited = 0;
-        int tempIdx = 0;
-        int nextIdx = 0;
         facilities[0].minDist = 0;
 
         while(facsVisited < facs) {
             
-//            uint nextIdx = 0;
-//            
-//            for(uint i = 0; i < unvisited.size(); ++i) {
-//                if(unvisited[i]->minDist < unvisited[nextIdx]->minDist) {
-//                    nextIdx = i;
-//                }
-//            }
-            tempIdx = 0;
+            uint nextIdx = 0;
+            
+            for(uint i = 0; i < unvisited.size(); ++i) {
+                if(unvisited[i]->minDist < unvisited[nextIdx]->minDist) {
+                    nextIdx = i;
+                }
+            }
+
             for(uint i = 0; i < unvisited.size(); i++) {
                 if(i != nextIdx) {
                     double dist = findDistance(unvisited[nextIdx], unvisited[i]);
@@ -73,21 +71,11 @@ public:
                         unvisited[i]->parent = unvisited[nextIdx];
                     }
                 }
-                
-                if(unvisited[i]->minDist < unvisited[tempIdx]->minDist) {
-                    tempIdx = i;
-                }
             }
             
-            totalDistance += unvisited[nextIdx]->minDist;
+            totalDistance += sqrt(unvisited[nextIdx]->minDist);
             unvisited.erase(unvisited.begin() + nextIdx);
             facsVisited++;
-            
-            if(nextIdx <= tempIdx) {
-                tempIdx -= 1;
-            }
-            
-            nextIdx = tempIdx;
         }
     }
     

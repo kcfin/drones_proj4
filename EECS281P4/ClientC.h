@@ -18,18 +18,23 @@ public:
         int x;
         int y;
         bool visited;
+        double minDist;
         
-        Facility() : facNum(0), x(0), y(0), visited(false) {}
+        Facility() : facNum(0), x(0), y(0), minDist(DBL_MAX), visited(false) {}
         
-        Facility(int fac, double xc, double yc) : facNum(fac), x(xc), y(yc), visited(false) {}
+        Facility(int fac, double xc, double yc) : facNum(fac), x(xc), y(yc), minDist(DBL_MAX), visited(false) {}
     };
     
-    vector<Facility> path;
-    vector<Facility> unvisited;
+    vector<int> path;
+    vector<int> unvisited;
+    vector<Facility> facilities;
     vector<vector<double>> distances;
     vector<int> finalPath;
     double currBest = 0;
-    double currDistance = 0;
+    double curPath = 0;
+    double mstDistance = 0;
+    double connect = 0;
+    double lowerBound = 0;
     int facs = 0;
     
     
@@ -46,7 +51,8 @@ public:
             double x, y;
             cin >> x >> y;
             // make dynamic i think
-            unvisited.push_back(Facility(i, x, y));
+            facilities.push_back(Facility(i, x, y));
+            unvisited.push_back(i);
         }
     }
     
@@ -54,30 +60,33 @@ public:
         
         
 //        int size = pow(facs, 2)/2 + (facs/2) + (facs%2);
-        
         distances = vector<vector<double>>(facs, vector<double>(facs, 0));
         
         for(int i = 0; i < facs; ++i) {
-            for(int j = i; j < facs; ++j) {
+            double smallestDist = DBL_MAX;
+            for(int j = 0; j < facs; ++j) {
                 // think about only storing half of this
-                distances[i][j] = distances[j][i] = findDistance(&unvisited[i], &unvisited[j]);
+                distances[i][j] = findDistance(&facilities[i], &facilities[j]);
+                if( i != j && distances[i][j] < smallestDist) {
+                    smallestDist = distances[i][j];
+                }
             }
+            facilities[i].minDist = smallestDist;
         }
     }
     
     virtual void getGreedy() {
-        getMatrix();
         
         int curIdx = 0;
         int nextIdx = 0;
         int facsVisited = 1;
         finalPath.push_back(0);
-        unvisited[0].visited = true;
+        facilities[0].visited = true;
         
         while(facsVisited < facs) {
             double distance = DBL_MAX;
             for(int i = 0; i < facs; ++i) {
-                if(i != curIdx && unvisited[i].visited == false) {
+                if(i != curIdx && facilities[i].visited == false) {
                     if(distances[curIdx][i] < distance) {
                         distance = distances[curIdx][i];
                         nextIdx = i;
@@ -89,7 +98,7 @@ public:
             curIdx = nextIdx;
             finalPath.push_back(curIdx);
             currBest += distance;
-            unvisited[curIdx].visited = true;
+            facilities[curIdx].visited = true;
             facsVisited++;
         }
         
@@ -98,6 +107,7 @@ public:
     
     virtual void findPath() {
         
+        getMatrix();
         getGreedy();
         permute();
 
@@ -105,51 +115,159 @@ public:
     
     void permute() {
         
-        if(currDistance > currBest) {
+        if(lowerBound > currBest) {
             return;
         }
+        
         if(unvisited.empty()) {
-            updateCurrBest();
+            currBest = lowerBound;
         }
+        
         for(unsigned int i = 0; i < unvisited.size(); ++i) {
             path.push_back(unvisited.front());
             unvisited.erase(unvisited.begin());
-            getLower();
+            getLowerBound();
             permute();
             unvisited.push_back(path.back());
             path.pop_back();
         }
     }
-    
-    void getLower() {
+
+    void getLowerBound() {
+        // current path
+        // mst of unvisited
+        // min dist to connect beg and end of path to unvisited
         
-        currDistance = 0;
-        for(uint i = 0; i < path.size(); ++i) {
-            currDistance += distances[path[i].facNum][path[(i+1)%path.size()].facNum];
+        getCurPath();
+        getMST();
+        getConnection();
+        
+        lowerBound = curPath + mstDistance + connect;
+    }
+    
+    void getCurPath() {
+        if(path.size() == 1) {
+            curPath = 0;
+        } else {
+            curPath += distances[path.back()][path.back()-1];
         }
     }
     
-    void updateCurrBest() {
+    void getMST() {
+
+        vector<Facility*> partMST;
+        
+        for(uint i = 0; i < unvisited.size(); i++) {
+            partMST.push_back(&facilities[unvisited[i]]);
+        }
+        
+        
+        mstDistance = 0;
+        int facsVisited = 0;
+        
+        while(facsVisited < (int)unvisited.size()) {
+            
+            uint nextIdx = 0;
+            
+            for(uint i = 0; i < partMST.size(); ++i) {
+                if(partMST[i]->minDist < partMST[nextIdx]->minDist) {
+                    nextIdx = i;
+                }
+            }
+
+//            for(uint i = 0; i < unvisited.size(); i++) {
+//                if(i != nextIdx) {
+//                    double dist = distances[nextIdx][i];
+//                    if(dist < facilities[unvisited[i]].minDist) {
+//                        facilities[unvisited[i]].minDist = dist;
+//                    }
+//                }
+//            }
+            
+            mstDistance += partMST[nextIdx]->minDist;
+            partMST.erase(partMST.begin()+nextIdx);
+            facsVisited++;
+        }
+    }
+    
+    void getConnection() {
+        
+        double connectFront = DBL_MAX;
+        double connectBack = DBL_MAX;
+        
+        for(uint i = 0; i < unvisited.size(); i++) {
+            
+            double front = distances[path.front()][unvisited[i]];
+            double back = distances[path.back()][unvisited[i]];
+            
+            if(front < connectFront) {
+                connectFront = front;
+            }
+            if(back < connectBack) {
+                connectBack = back;
+            }
+        }
+        
+        connect = connectFront + connectBack;
+    }
+    
+    
+//    double minPath() {
+//        
+//        if(unvisited.empty()) {
+//            // done
+//        }
+//        
+//        int idx = path.back().facNum;
+//        double totalCost = DBL_MAX;
+//        
+//        for (Facility fac: unvisited) {
+//            double cost = distances[idx][fac.facNum];
+//            
+//            path.push_back(unvisited.front());
+//            unvisited.erase(unvisited.begin());
+//            
+//            double costRest = minPath();
+//            double curCost = cost + costRest;
+//            
+//            if(curCost < totalCost) {
+//                totalCost = curCost;
+//            }
+//        }
+//        
+//        return totalCost;
+//        
+//    }
+    
+//    void getLower() {
+//        
+//        currDistance = 0;
+//        for(uint i = 0; i < path.size(); ++i) {
+//            currDistance += distances[path[i].facNum][path[(i+1)%path.size()].facNum];
+//        }
+//    }
+    
+//    void updateCurrBest() {
 //        currDistance = 0;
 //        
 //        for(int i = 0; i < facs; ++i) {
 //            currDistance += distances[path[i].facNum][path[(i+1)%facs].facNum];
 //        }
         
-        if(currDistance < currBest) {
-            currBest = currDistance;
-            finalPath.clear();
-            for(int i = 0; i < facs; ++i) {
-                finalPath.push_back(path[i].facNum);
-            }
-        }
-    }
+//        if(currDistance < currBest) {
+//            currBest = currDistance;
+//            finalPath.clear();
+//            for(int i = 0; i < facs; ++i) {
+//                finalPath.push_back(path[i].facNum);
+//            }
+//        }
+//    }
     
     virtual void printPath() {
         cout << currBest << endl;
         
         for(int i = 0; i < facs; ++i) {
-            cout << finalPath[i] << " ";
+            cout << path[i] << " ";
         }
         
         cout << endl;
