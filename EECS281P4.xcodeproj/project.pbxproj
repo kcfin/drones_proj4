@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8A0143F21A33928C000A3B19 /* sample-1-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF721A2F4B5A00C51115 /* sample-1-BC.txt */; };
 		8A0143F31A3394A4000A3B19 /* sample-2-BC.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A32BF751A2F4B5A00C51115 /* sample-2-BC.txt */; };
+		8A6958C51A37BF4700BC6767 /* test-2-B.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A6958BF1A37BE1C00BC6767 /* test-2-B.txt */; };
+		8A6958C61A37BF4700BC6767 /* test-3-C.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A6958C01A37BE5000BC6767 /* test-3-C.txt */; };
+		8A6958C71A37BF4700BC6767 /* test-4-B.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A6958C11A37BE7500BC6767 /* test-4-B.txt */; };
+		8A6958C81A37BF4700BC6767 /* test-5-C.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A6958C21A37BE9400BC6767 /* test-5-C.txt */; };
+		8A6958C91A37BF4700BC6767 /* test-6-B.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A6958C31A37BEBA00BC6767 /* test-6-B.txt */; };
+		8A6958CA1A37BF4700BC6767 /* test-7-C.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A6958C41A37BF2500BC6767 /* test-7-C.txt */; };
 		8ACA8C2B1A1CEEF40017FFE1 /* project4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACA8C291A1CEEF40017FFE1 /* project4.cpp */; };
 		BF610CF21A1D1CA400436368 /* test-1-A.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF610CF01A1D1C2200436368 /* test-1-A.txt */; };
 		BF6670451A33DCF900B0D54B /* project4.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACA8C2A1A1CEEF40017FFE1 /* project4.h */; };
@@ -30,6 +36,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				8A6958C51A37BF4700BC6767 /* test-2-B.txt in CopyFiles */,
+				8A6958C61A37BF4700BC6767 /* test-3-C.txt in CopyFiles */,
+				8A6958C71A37BF4700BC6767 /* test-4-B.txt in CopyFiles */,
+				8A6958C81A37BF4700BC6767 /* test-5-C.txt in CopyFiles */,
+				8A6958C91A37BF4700BC6767 /* test-6-B.txt in CopyFiles */,
+				8A6958CA1A37BF4700BC6767 /* test-7-C.txt in CopyFiles */,
 				BF6670551A36629B00B0D54B /* sample-4-A.txt in CopyFiles */,
 				BF6670561A36629B00B0D54B /* sample-4-BC.txt in CopyFiles */,
 				BF6670571A36629B00B0D54B /* sample-5-A.txt in CopyFiles */,
@@ -61,6 +73,12 @@
 		8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-5-A.txt"; sourceTree = "<group>"; };
 		8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-5-B.txt"; sourceTree = "<group>"; };
 		8A32BF7F1A2F509200C51115 /* ClientB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientB.h; sourceTree = "<group>"; };
+		8A6958BF1A37BE1C00BC6767 /* test-2-B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-2-B.txt"; sourceTree = "<group>"; };
+		8A6958C01A37BE5000BC6767 /* test-3-C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-3-C.txt"; sourceTree = "<group>"; };
+		8A6958C11A37BE7500BC6767 /* test-4-B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-4-B.txt"; sourceTree = "<group>"; };
+		8A6958C21A37BE9400BC6767 /* test-5-C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-5-C.txt"; sourceTree = "<group>"; };
+		8A6958C31A37BEBA00BC6767 /* test-6-B.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-6-B.txt"; sourceTree = "<group>"; };
+		8A6958C41A37BF2500BC6767 /* test-7-C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-7-C.txt"; sourceTree = "<group>"; };
 		8ACA8C1D1A1CEE110017FFE1 /* EECS281P4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EECS281P4; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACA8C291A1CEEF40017FFE1 /* project4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = project4.cpp; sourceTree = "<group>"; };
 		8ACA8C2A1A1CEEF40017FFE1 /* project4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = project4.h; sourceTree = "<group>"; };
@@ -131,6 +149,12 @@
 				8A32BF7C1A2F4B5A00C51115 /* sample-5-A.txt */,
 				8A32BF7D1A2F4B5A00C51115 /* sample-5-B.txt */,
 				BF610CF01A1D1C2200436368 /* test-1-A.txt */,
+				8A6958BF1A37BE1C00BC6767 /* test-2-B.txt */,
+				8A6958C01A37BE5000BC6767 /* test-3-C.txt */,
+				8A6958C11A37BE7500BC6767 /* test-4-B.txt */,
+				8A6958C21A37BE9400BC6767 /* test-5-C.txt */,
+				8A6958C31A37BEBA00BC6767 /* test-6-B.txt */,
+				8A6958C41A37BF2500BC6767 /* test-7-C.txt */,
 				BFD2E8171A23B378003F19BD /* sample-1-A.txt */,
 				BFD2E8161A23B378003F19BD /* sample-1-A-out.txt */,
 			);

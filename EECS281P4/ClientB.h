@@ -21,7 +21,7 @@ public:
         
         Facility() : facNum(0), x(0), y(0), minDist(DBL_MAX), parent(nullptr) {}
         
-        Facility(int fac, double xc, double yc) : facNum(fac), x(xc), y(yc), minDist(DBL_MAX), parent(nullptr) {}
+        Facility(int fac, int xc, int yc) : facNum(fac), x(xc), y(yc), minDist(DBL_MAX), parent(nullptr) {}
         
     };
     
@@ -39,8 +39,7 @@ public:
         for(int i = 0; i < facs; ++i) {
             double x, y;
             cin >> x >> y;
-            facilities.push_back(Facility(i, x, y));
-            unvisited.push_back(&facilities[i]);
+            addFacilities(i, x, y);
         }
     }
     
@@ -48,12 +47,16 @@ public:
         return pow((fac1->x-fac2->x), 2) + pow((fac1->y-fac2->y), 2);
     }
     
+    void addFacilities(int fac, int xc, int yc) {
+        facilities.push_back(Facility(fac, xc, yc));
+        unvisited.push_back(&facilities.back());
+    }
     
     virtual void findPath() {
-        int facsVisited = 0;
+        uint facsVisited = 0;
         facilities[0].minDist = 0;
 
-        while(facsVisited < facs) {
+        while(facsVisited < facilities.size()) {
             
             uint nextIdx = 0;
             

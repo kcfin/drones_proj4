@@ -23,6 +23,7 @@ public:
     virtual void findPath() { }
     
     virtual void printPath() { }
+    
 
 };
 

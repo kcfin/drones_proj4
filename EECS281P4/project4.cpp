@@ -13,8 +13,8 @@ int main(int argc, char * argv[]) {
     cout << setprecision(2);
     cout << fixed;
     
-    ifstream in("sample-1-BC.txt");
-    cin.rdbuf(in.rdbuf());
+//    ifstream in("test-7-C.txt");
+//    cin.rdbuf(in.rdbuf());
     
     getOpts(argc, argv);
     client->getInput();
